@@ -1,4 +1,3 @@
-import ahmad.egypt.lensometertool.BuildConfig
 import android.util.Log
 
 class TargetedCounter(private var countThreshold: Int = 10,private var delayThreshold: Long = 500) {
@@ -7,7 +6,7 @@ class TargetedCounter(private var countThreshold: Int = 10,private var delayThre
 
 
     private fun tick(): Boolean {
-        if(BuildConfig.DEBUG) Log.d("Count", "" + counter)
+        Log.d("Count", "" + counter)
         if (startTime == 0L) {
             startTime = System.currentTimeMillis()
             counter++
